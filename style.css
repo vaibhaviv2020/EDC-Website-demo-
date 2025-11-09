@@ -1,4 +1,8 @@
+/* ==========================================================
+   E-CELL WEBSITE MAIN STYLESHEET (No Variables - Same Layout)
+   ========================================================== */
 
+/* ---------- Global reset ---------- */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -9,11 +13,12 @@ html {
   box-sizing: inherit;
 }
 
+/* ---------- Body / Page ---------- */
 body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
-  background: #f5efeb;  /* main background color */
-  color: #f1f5f9;       /* main text color */
+  background: antiquewhite; /* Page background */
+  color: #c8d9e6;           /* Main text color */
   min-height: 100vh;
   line-height: 1.6;
 }
@@ -23,7 +28,7 @@ body {
    ========================================================== */
 
 h1, h2, h3, h4, h5, h6 {
-  color: #f1f5f9;
+  color: #c8d9e6;
   font-weight: 700;
   margin-top: 0;
   margin-bottom: 0.5em;
@@ -37,23 +42,25 @@ h3 { font-size: 1.4rem; }
 p {
   margin-top: 0;
   margin-bottom: 1em;
-  color: #94a3b8;
+  color: #ffffff;
 }
 
 a {
-  color: #2563eb;
+  color: #567cbd;
   text-decoration: none;
   transition: color 0.2s;
 }
 
-a:hover, a:focus {
-  color: #60a5fa;
+a:hover,
+a:focus {
+  color: #84a3d6;
   text-decoration: underline;
 }
 
 /* ==========================================================
    CONTAINER
    ========================================================== */
+
 .container {
   width: 90%;
   max-width: 1200px;
@@ -87,7 +94,7 @@ a:hover, a:focus {
   gap: 10px;
   font-size: 1.5rem;
   font-weight: 800;
-  color: #f1f5f9;
+  color: #c8d9e6;
   text-decoration: none;
 }
 
@@ -104,10 +111,11 @@ a:hover, a:focus {
   list-style: none;
   margin: 0;
   padding: 0;
+  height: 50px;
 }
 
 .nav a {
-  color: #f1f5f9;
+  color: #c8d9e6;
   font-weight: 600;
   font-size: 20px;
   padding: 6px 10px;
@@ -115,18 +123,20 @@ a:hover, a:focus {
   transition: background 0.2s, color 0.2s;
 }
 
-.nav a:hover, .nav a:focus {
-  background: #2563eb;
+.nav a:hover,
+.nav a:focus {
+  background: #567cbd;
   color: #fff;
   text-decoration: none;
 }
 
+/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
   background: #0f172a;
   min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-content a {
@@ -181,7 +191,7 @@ a:hover, a:focus {
 .hero-content2 p {
   font-size: 20px;
   margin-bottom: 45px;
-  color: #ffffff;
+  color: white;
 }
 
 .buttons {
@@ -198,29 +208,30 @@ a:hover, a:focus {
   font-size: 1rem;
   border: none;
   cursor: pointer;
-  background: #2563eb;
+  background: #567cbd;
   color: #fff;
   transition: background 0.2s, box-shadow 0.2s;
 }
 
 .btn:hover {
-  background: #1e40af;
+  background: #3f63a4;
 }
 
 .btn-explore {
   background: transparent;
-  color: #2563eb;
-  border: 2px solid #2563eb;
+  color: #567cbd;
+  border: 2px solid #567cbd;
 }
 
 .btn-explore:hover {
-  background: #2563eb;
+  background: #567cbd;
   color: #fff;
 }
 
 /* ==========================================================
    SECTIONS
    ========================================================== */
+
 .section {
   padding: 64px 0;
 }
@@ -234,11 +245,11 @@ a:hover, a:focus {
 .section-title {
   font-size: 2rem;
   margin-bottom: 1em;
-  color: #2563eb;
+  color: #567cbd;
 }
 
 .section-content {
-  color: #94a3b8;
+  color: #ffffff;
   font-size: 1.1rem;
 }
 
@@ -267,7 +278,7 @@ a:hover, a:focus {
 .event-card .meta {
   display: flex;
   gap: 10px;
-  color: #94a3b8;
+  color: #ffffff;
 }
 
 /* ==========================================================
@@ -304,7 +315,7 @@ a:hover, a:focus {
 }
 
 /* ==========================================================
-   TEAM SECTION
+   TEAM
    ========================================================== */
 
 .member {
@@ -352,7 +363,7 @@ a:hover, a:focus {
 .site-footer {
   border-top: 1px solid rgba(148, 163, 184, 0.15);
   padding: 20px 0;
-  background:#2f4156;
+  background: #2f4156;
   color: white;
   text-align: center;
 }
@@ -372,32 +383,40 @@ a:hover, a:focus {
   align-items: center;
   justify-content: center;
   background: transparent;
-  color: #2563eb;
+  color: #567cbd;
   font-size: 1.2rem;
 }
 
 .to-top:hover {
-  background: #2563eb;
+  background: #567cbd;
   color: #fff;
 }
 
 /* ==========================================================
    RESPONSIVE DESIGN
    ========================================================== */
+
 @media (max-width: 900px) {
   .grid-2 {
     grid-template-columns: 1fr;
     gap: 24px;
   }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 700px) {
-  .nav { display: none; }
-  .nav-toggle { display: flex; }
-  .social-sidebar { display: none; }
+  .nav {
+    display: none;
+  }
+
+  .nav-toggle {
+    display: flex;
+  }
+
+  .social-sidebar {
+    display: none;
+  }
 }
-
-
