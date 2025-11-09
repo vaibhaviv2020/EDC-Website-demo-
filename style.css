@@ -12,7 +12,7 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', Arial, sans-serif;
-  background: #0f172a;  /* main background color */
+  background: #f5efeb;  /* main background color */
   color: #f1f5f9;       /* main text color */
   min-height: 100vh;
   line-height: 1.6;
@@ -65,7 +65,7 @@ a:hover, a:focus {
    ========================================================== */
 
 .site-header {
-  background: rgba(2, 6, 23, 0.95);
+  background: #2f4156;
   border-bottom: 1px solid rgba(148, 163, 184, 0.1);
   position: sticky;
   top: 0;
@@ -352,7 +352,7 @@ a:hover, a:focus {
 .site-footer {
   border-top: 1px solid rgba(148, 163, 184, 0.15);
   padding: 20px 0;
-  background: rgba(2, 6, 12, 0.5);
+  background:#2f4156;
   color: white;
   text-align: center;
 }
@@ -399,4 +399,5 @@ a:hover, a:focus {
   .nav-toggle { display: flex; }
   .social-sidebar { display: none; }
 }
+
 
