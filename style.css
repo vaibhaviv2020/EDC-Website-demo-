@@ -45,48 +45,77 @@ a:hover {
 }
 
 /* HEADER */
+/* HEADER (FIXED VERSION – NO WHITE LINE) */
 .site-header {
   background: rgba(2, 6, 23, 0.95);
-  border-bottom: 1px solid rgba(148,163,184,0.10);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
   position: sticky;
   top: 0;
+  width: 100%;
   z-index: 100;
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 14px 0;
-  height: 100px;
+  justify-content: space-between;
+  padding: 12px 0;
 }
 
+/* BRAND LEFT SIDE */
 .brand {
   display: flex;
   align-items: center;
   gap: 10px;
   color: #f1f5f9;
-  font-size: 1.5rem;
-  font-weight: 800;
+  text-decoration: none;
 }
 
-/* NAV */
+/* Fixes the white line / underline ghost */
+.brand-text {
+  font-weight: 800;
+  display: inline-block;
+  text-decoration: none !important;
+  border: none !important;
+}
+
+/* NAVIGATION RIGHT SIDE */
 .nav {
   display: flex;
   align-items: center;
   gap: 24px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
+/* Fix ghost underline & white dash */
 .nav a {
+  color: #f1f5f9;
+  font-weight: 600;
   font-size: 18px;
   padding: 6px 10px;
   border-radius: 6px;
-  color: #f1f5f9;
+  text-decoration: none !important;
+  border-bottom: none !important;
+  outline: none !important;
 }
+
+/* Hover – NO underline */
 .nav a:hover {
   background: #2563eb;
+  color: white;
+  text-decoration: none !important;
 }
+
+/* CONTACT BUTTON ALIGNMENT */
+.nav .btn {
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  padding: 8px 14px;
+}
+
 
 /* DROPDOWN */
 .dropdown-content {
@@ -99,6 +128,8 @@ a:hover {
   color: white;
   padding: 12px;
   display: block;
+   text-decoration: none !important;
+  border-bottom: none !important;
 }
 .dropdown:hover .dropdown-content {
   display: block;
@@ -443,4 +474,5 @@ a:hover {
     font-size: 36px;
   }
 }
+
 
