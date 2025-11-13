@@ -8,15 +8,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- =========================================
-            HEADER
-========================================= -->
+<!-- HEADER -->
 <header class="site-header">
     <div class="container header-inner">
         <a class="brand" href="#top">
@@ -24,9 +22,7 @@
             <span class="brand-text">E-Cell</span>
         </a>
 
-        <button class="nav-toggle">
-            <span></span><span></span><span></span>
-        </button>
+        <button class="nav-toggle"><span></span><span></span><span></span></button>
 
         <nav>
             <ul id="primaryNav" class="nav">
@@ -35,49 +31,45 @@
                 <li><a href="team.html">Team</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#contact" class="btn btn-primary">Contact</a></li>
-
                 <li class="dropdown">
                     <a href="#" class="dropbtn">Join Us</a>
                     <div class="dropdown-content">
-                        <a href="/register.html">Register</a>
-                        <a href="/login.html">Login</a>
+                        <a href="register.html">Register</a>
+                        <a href="login.html">Login</a>
                     </div>
                 </li>
+
+                <li><a href="#footer-contact" class="btn btn-primary">Contact</a></li>
             </ul>
         </nav>
     </div>
 </header>
 
-<!-- =========================================
-            HERO SECTION
-========================================= -->
+<!-- HERO -->
 <section class="hero-section">
     <div class="hero-content2">
         <h1>Ignite. Innovate. Impact.</h1>
-        <p>Entrepreneurship Cell empowering students to build, launch, and lead.</p>
+        <p>Entrepreneurship Cell empowering students to build, launch, and lead through hands-on programs, startup support, and a vibrant community.</p>
 
         <div class="buttons">
-            <a href="#events" class="btn">Explore Events</a>
-            <a href="#contact" class="btn">Join E-Cell</a>
+            <a href="#about" class="btn explore">Explore Events</a>
+            <a href="#footer-contact" class="btn join">Join E-Cell</a>
         </div>
 
         <ul class="stats">
-            <li><strong>50+</strong>Startups mentored</li>
-            <li><strong>20K+</strong>Attendees reached</li>
-            <li><strong>100+</strong>Workshops</li>
+            <li><strong>50+</strong><span>Startups mentored</span></li>
+            <li><strong>20K+</strong><span>Attendees reached</span></li>
+            <li><strong>100+</strong><span>Workshops</span></li>
         </ul>
     </div>
 </section>
 
-<!-- =========================================
-            ABOUT
-========================================= -->
+<!-- ABOUT -->
 <section id="about" class="section about">
     <div class="container grid-2">
         <div>
             <h2>About E-Cell</h2>
-            <p>We foster entrepreneurship through events, mentorship & innovation.</p>
+            <p>We foster an entrepreneurial mindset through events, mentorship, incubation, and opportunities for young innovators.</p>
 
             <ul class="checklist">
                 <li>Founder Talks</li>
@@ -99,85 +91,81 @@
     </div>
 </section>
 
-<!-- =========================================
-            EVENTS
-========================================= -->
-<section id="events" class="section events">
+<!-- TESTIMONIALS -->
+<section id="testimonials" class="section testimonials">
     <div class="container">
-        <h2>Upcoming Events</h2>
+        <h2 class="center">What people say</h2>
 
-        <div class="event-grid">
-            <article class="event-card">
-                <h3>Speaker Event</h3>
-                <p>Experience talks by startup founders.</p>
-                <div class="meta"><span>Sep 29</span> <span>Auditorium</span></div>
-                <a href="#contact" class="btn btn-light">Register</a>
-            </article>
+        <div class="testimonial-grid">
+            <figure class="testimonial">
+                <blockquote>“E-Cell helped us validate fast and meet our first investor.”</blockquote>
+                <figcaption>— XXXXX, Alumna Founder</figcaption>
+            </figure>
 
-            <article class="event-card">
-                <h3>E-Summit</h3>
-                <p>Tech Fest 2026</p>
-                <div class="meta"><span>January 2026</span></div>
-                <a href="#contact" class="btn btn-light">Register</a>
-            </article>
+            <figure class="testimonial">
+                <blockquote>“Workshops were practical and community-driven. Loved the momentum.”</blockquote>
+                <figcaption>— XXXXX, 3rd Year</figcaption>
+            </figure>
 
-            <article class="event-card">
-                <h3>Bhartiyam Event</h3>
-                <p>TBD</p>
-                <div class="meta"><span>Feb/Mar</span></div>
-                <a href="#contact" class="btn btn-light">Register</a>
-            </article>
+            <figure class="testimonial">
+                <blockquote>“Great platform to network with builders and mentors on campus.”</blockquote>
+                <figcaption>— Prof. Sudhir Kadam</figcaption>
+            </figure>
         </div>
     </div>
 </section>
 
-<!-- =========================================
-            GALLERY
-========================================= -->
-<section id="gallery" class="section gallery">
-    <div class="container">
-        <h2 class="center">Gallery</h2>
-
-        <div class="gallery-grid">
-            <a class="gallery-item"><img src="img/edc-pic1.jpg"></a>
-            <a class="gallery-item"><img src="img/edc-pic2.jpg"></a>
-            <a class="gallery-item"><img src="img/edc-pic3.jpg"></a>
-            <a class="gallery-item"><img src="img/edc-pic4.jpg"></a>
-            <a class="gallery-item"><img src="img/bhartiyam-25.jpg"></a>
-            <a class="gallery-item"><img src="img/edc-pic6.jpg"></a>
-        </div>
-    </div>
-</section>
-
-<!-- =========================================
-            SOCIAL SIDEBAR
-========================================= -->
+<!-- SOCIAL SIDEBAR -->
 <div class="social-sidebar">
-    <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-    <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
-    <a href="mailto:bhavyachawda19@gmail.com" class="icon mail"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/company/entrepreneurshipdevelopmentcell/" target="_blank" class="icon linkedin">
+        <i class="fab fa-linkedin-in"></i>
+    </a>
+    <a href="https://www.instagram.com/edcbvducoep" target="_blank" class="icon instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="mailto:bhavyachawda19@gmail.com" class="icon mail">
+        <i class="fas fa-envelope"></i>
+    </a>
 </div>
 
-<!-- =========================================
-            FOOTER (UPDATED)
-========================================= -->
+<!-- FOOTER WITH CONTACT (RIGHT SIDE) -->
 <footer class="site-footer">
     <div class="container footer-inner">
 
-        <!-- LEFT SIDE -->
+        <!-- Left -->
         <div class="footer-left">
             <p>© <span id="year"></span> E-Cell • Built by Bhavya Chawda | Ansh Tarsoliya</p>
+            <p>Email: bhavyachawda19@gmail.com</p>
         </div>
 
-        <!-- RIGHT SIDE: GET IN TOUCH -->
-        <div class="footer-contact">
+        <!-- Right Contact Section -->
+        <div id="footer-contact" class="footer-contact">
             <h3>Get in touch</h3>
             <ul>
                 <li><strong>Email:</strong> bhavyachawda19@gmail.com</li>
-                <li><strong>Phone:</strong> +91 6263537991</li>
-                <li><strong>Address:</strong> Bharti Vidyapeeth College Of Engineering, Pune</li>
+                <li><strong>Ph.No:</strong> +91 6263537991</li>
+                <li><strong>Address:</strong> BVUCOEP, Pune</li>
                 <li><strong>Hours:</strong> Mon–Fri, 10:00–17:00</li>
             </ul>
+
+            <form id="contactFormFooter" class="card form">
+                <label>
+                    <span>Name</span>
+                    <input type="text" required>
+                </label>
+
+                <label>
+                    <span>Email</span>
+                    <input type="email" required>
+                </label>
+
+                <label>
+                    <span>Message</span>
+                    <textarea rows="4" required></textarea>
+                </label>
+
+                <button class="btn btn-primary" type="submit">Send</button>
+            </form>
         </div>
 
     </div>
@@ -187,8 +175,6 @@
 
 </body>
 </html>
-
-
 
 
 
