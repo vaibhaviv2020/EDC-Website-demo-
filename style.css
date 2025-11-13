@@ -116,6 +116,10 @@ a:hover {
   padding: 8px 14px;
 }
 
+.nav-toggle {
+  display: none !important;
+}
+
 
 /* DROPDOWN */
 .dropdown-content {
@@ -474,5 +478,6 @@ a:hover {
     font-size: 36px;
   }
 }
+
 
 
