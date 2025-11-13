@@ -124,21 +124,31 @@ a:hover {
 
 
 /* DROPDOWN */
+.dropdown {
+  position: relative;
+}
+
 .dropdown-content {
-  display: none;
+  display: block; /* always block for transition */
   position: absolute;
+  top: 100%;
+  left: 0;
   background: #0f172a;
   min-width: 160px;
+  z-index: 9999;
+  border: 1px solid rgba(255,255,255,0.1);
+
+  /* fix white line flicker */
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(5px);
+  transition: opacity .2s ease, transform .2s ease;
 }
-.dropdown-content a {
-  color: white;
-  padding: 12px;
-  display: block;
-   text-decoration: none !important;
-  border-bottom: none !important;
-}
+
 .dropdown:hover .dropdown-content {
-  display: block;
+  pointer-events: auto;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* HERO SECTION */
@@ -480,6 +490,7 @@ a:hover {
     font-size: 36px;
   }
 }
+
 
 
 
