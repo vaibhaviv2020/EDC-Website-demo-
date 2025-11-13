@@ -48,12 +48,14 @@ a:hover {
 /* HEADER (FIXED VERSION – NO WHITE LINE) */
 .site-header {
   background: rgba(2, 6, 23, 0.95);
-  border-bottom: 1px solid rgba(148, 163, 184, 0.10);
+  border-bottom: none !important;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 100;
+  box-shadow: none !important;
 }
+
 
 .header-inner {
   display: flex;
@@ -478,6 +480,7 @@ a:hover {
     font-size: 36px;
   }
 }
+
 
 
 
