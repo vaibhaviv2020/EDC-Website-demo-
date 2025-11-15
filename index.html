@@ -1,197 +1,235 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>E-Cell | Entrepreneurship Cell</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>E-Cell | Entrepreneurship Cell</title>
 
-    <!-- Fonts + Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- Fonts & icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Meta -->
+  <meta name="description" content="E-Cell of our college – fostering entrepreneurship through events, mentorship, and innovation.">
 </head>
-
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
+  <!-- HEADER -->
+  <header class="site-header">
     <div class="container header-inner">
-        <a class="brand" href="#top">
-            <img src="img/edc-logo.jpg" class="logo" width="66" height="66">
-            <span class="brand-text">E-Cell</span>
-        </a>
+      <a class="brand" href="#top" aria-label="E-Cell Home">
+        <img src="img/edc-logo.jpg" alt="E-Cell logo" class="logo" width="66" height="66">
+        <span class="brand-text">E-Cell</span>
+      </a>
 
-        <nav>
-            <ul class="nav" id="primaryNav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="events.html">Events</a></li>
-                <li><a href="team.html">Team</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#footer" class="btn">Contact</a></li>
+      <button class="nav-toggle" aria-controls="primaryNav" aria-expanded="false" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
 
-                <li class="dropdown">
-                    <a href="#" class="dropbtn">Join Us</a>
-                    <div class="dropdown-content">
-                        <a href="register.html">Register</a>
-                        <a href="login.html">Login</a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
-
-
-
-<!-- ================= HERO ================= -->
-<section class="hero-section">
-    <div class="hero-content">
-        <h1>
-            Ignite.<br>
-            Innovate.<br>
-            Impact.
-        </h1>
-
-        <p>Entrepreneurship Cell empowering students to build, launch, and lead through hands-on programs and a vibrant community.</p>
-
-        <div class="buttons">
-            <a href="#about" class="btn btn-outline">Explore Events</a>
-            <a href="#footer" class="btn">Join E-Cell</a>
-        </div>
-
-        <ul class="stats">
-            <li><strong>50+</strong> Startups mentored</li>
-            <li><strong>20K+</strong> Attendees reached</li>
-            <li><strong>100+</strong> Workshops</li>
-        </ul>
-    </div>
-</section>
-
-
-
-<!-- ================= ABOUT ================= -->
-<section id="about" class="section about">
-    <div class="container">
-
-        <h2 class="center">About E-Cell</h2>
-        <p class="center big-text">
-            We foster an entrepreneurial mindset by hosting events, mentorship clinics, ideation sprints, and incubation support.
-        </p>
-
-        <ul class="checklist large-center">
-            <li>Founder Talks</li>
-            <li>Startup Bootcamps</li>
-            <li>Incubation & Mentorship</li>
-            <li>Pitch Competitions</li>
-        </ul>
-
-    </div>
-</section>
-
-
-
-<!-- ============ FLAGSHIP PROGRAMS (FULL WIDTH) ============ -->
-<section class="flagship-section">
-    <div class="flagship-card">
-        <h2>Flagship Programs</h2>
-
-        <div class="flagship-list">
-            <div>Startup Weekend</div>
-            <div>Innovation Challenge</div>
-            <div>Women in Entrepreneurship</div>
-            <div>Investor Roundtable</div>
-        </div>
-    </div>
-</section>
-
-
-
-<!-- ============ TESTIMONIAL STRIP (4 FULL WIDTH BOXES) ============ -->
-<section class="testimonial-strip">
-
-    <div class="strip-box">Cloud Analytics</div>
-    <div class="strip-box">Modernization</div>
-    <div class="strip-box">Business Strategy</div>
-    <div class="strip-box">Customer Growth</div>
-
-</section>
-
-
-
-<!-- ============ NUMBERS SECTION ============ -->
-<section class="numbers">
-    <h2 class="center">We Take Pride in Our Numbers</h2>
-
-    <div class="numbers-grid">
-        <div><span>15</span><p>Years of Experience</p></div>
-        <div><span>10K</span><p>Business Partners</p></div>
-        <div><span>25M</span><p>Products Installed</p></div>
-        <div><span>22</span><p>Countries World Wide</p></div>
-        <div><span>5</span><p>Industry Awards</p></div>
-    </div>
-</section>
-
-
-
-<!-- ================== FOOTER ================== -->
-<footer id="footer" class="site-footer">
-
-    <div class="footer-inner container">
-
-        <!-- LEFT CONTACT INFO -->
-        <div class="footer-col contact-left">
-            <h3>Contact</h3>
-            <p>Email: bhavyachawda19@gmail.com</p>
-            <p>Phone: +91 62635 37991</p>
-            <p>Address: BVUCOEP, Pune</p>
-            <p>Hours: Mon–Fri, 10:00–17:00</p>
-        </div>
-
-        <!-- CENTER NAV -->
-        <div class="footer-col nav-col">
-            <h3>Navigate</h3>
-            <a href="index.html">Home</a>
-            <a href="events.html">Events</a>
-            <a href="team.html">Team</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="#about">About</a>
-            <a href="#footer">Contact</a>
-        </div>
-
-        <!-- RIGHT CONTACT FORM -->
-        <div class="footer-col form-col">
-            <h3>Get in Touch</h3>
-            <p>Collaborations, sponsorships, or joining the team—drop us a message.</p>
-
-            <form class="footer-form">
-                <input type="text" placeholder="Your name" required>
-                <input type="email" placeholder="Your email" required>
-                <textarea placeholder="Your message..." required></textarea>
-                <button class="btn">Send</button>
-            </form>
-
-            <div class="footer-social">
-                <a href="#" class="icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="icon instagram"><i class="fab fa-instagram"></i></a>
-                <a href="mailto:bhavyachawda19@gmail.com" class="icon mail"><i class="fas fa-envelope"></i></a>
+      <nav>
+        <ul id="primaryNav" class="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="team.html">Team</a></li>
+          <!-- gallery removed per request -->
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact" class="btn btn-primary">Contact</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropbtn">Join Us</a>
+            <div class="dropdown-content" aria-hidden="true">
+              <a href="register.html">Register</a>
+              <a href="login.html">Login</a>
             </div>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (left aligned, larger, gradient BG) -->
+  <main>
+    <section class="hero-section">
+      <div class="hero-inner container">
+        <div class="hero-content">
+          <h1 class="hero-line">Ignite.</h1>
+          <h1 class="hero-line">Innovate.</h1>
+          <h1 class="hero-line">Impact.</h1>
+
+          <p class="hero-sub">Entrepreneurship Cell empowering students to build, launch and lead through hands-on programs and a vibrant community.</p>
+
+          <div class="hero-buttons">
+            <a href="#initiatives" class="btn btn-explore">Explore Events</a>
+            <a href="#contact" class="btn">Join E-Cell</a>
+          </div>
         </div>
 
+        <!-- placeholder decorative panel (you can replace with img later) -->
+        <div class="hero-panel" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT (full width center) -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="about-inner">
+          <div class="about-copy">
+            <h2>About E-Cell</h2>
+            <p>We foster an entrepreneurial mindset through flagship events, mentorship clinics, ideation sprints and incubation support. Our mission is to turn ideas into impactful ventures.</p>
+
+            <ul class="checklist">
+              <li>Founder talks and AMAs</li>
+              <li>Startup Bootcamps</li>
+              <li>Incubation and mentorship</li>
+              <li>Pitch competitions and grants</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLAGSHIP (full width box under about) -->
+    <section id="initiatives" class="section flagship">
+      <div class="container">
+        <div class="card fullwidth flagship-card">
+          <h3>Flagship Programs</h3>
+          <div class="flagship-grid">
+            <div>Startup Weekend — idea validation & MVP guidance</div>
+            <div>Innovation Challenge — solve campus problems</div>
+            <div>Women in Entrepreneurship — community & mentorship</div>
+            <div>Investor Roundtable — pitch & feedback</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NUMBERS — styled like your inspiration (large stats block) -->
+    <section class="section numbers">
+      <div class="container numbers-grid">
+        <div class="num-card">
+          <strong>50+</strong>
+          <span>Startups mentored</span>
+        </div>
+        <div class="num-card">
+          <strong>20K+</strong>
+          <span>Attendees reached</span>
+        </div>
+        <div class="num-card">
+          <strong>100+</strong>
+          <span>Workshops</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS — horizontal flush boxes like the Wix inspiration -->
+    <section id="testimonials" class="section testimonials">
+      <div class="container">
+        <h2 class="center">What people say</h2>
+
+        <div class="testimonial-row">
+          <figure class="testimonial">
+            <blockquote>“E-Cell helped us validate fast and meet our first investor.”</blockquote>
+            <figcaption>— XXXXX, Alumna Founder</figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>“Workshops were practical and community-driven. Loved the momentum.”</blockquote>
+            <figcaption>— XXXXX, 3rd Year</figcaption>
+          </figure>
+
+          <figure class="testimonial">
+            <blockquote>“Great platform to network with builders and mentors on campus.”</blockquote>
+            <figcaption>— Prof. Sudhir Kadam, Faculty Mentor</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT (kept here for anchor) - main contact section removed from home, contact UI in footer -->
+    <section id="contact" class="section contact-anchor" aria-hidden="true">
+      <!-- left intentionally minimal so footer handles the contact input -->
+      <div class="container">
+        <!-- empty - footer contains full contact form -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- SOCIAL SIDEBAR (floating icons) -->
+  <div class="social-sidebar" aria-hidden="false">
+    <a href="https://www.linkedin.com/company/entrepreneurshipdevelopmentcell" class="icon linkedin" target="_blank" rel="noreferrer"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://www.instagram.com/edcbvducoep" class="icon instagram" target="_blank" rel="noreferrer"><i class="fab fa-instagram"></i></a>
+    <a href="mailto:bhavyachawda19@gmail.com" class="icon mail"><i class="fas fa-envelope"></i></a>
+  </div>
+
+  <!-- FOOTER: left = contact details + nav links; right = Get in touch form + icons -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <div class="footer-contact">
+          <p><strong>Email:</strong> bhavyachawda19@gmail.com</p>
+          <p><strong>Phone:</strong> +91 62635 37991</p>
+          <p><strong>Address:</strong> BVUCOEP, Pune</p>
+          <p><strong>Hours:</strong> Mon–Fri, 10:00–17:00</p>
+        </div>
+
+        <nav class="footer-nav" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="events.html">Events</a>
+          <a href="team.html">Team</a>
+          <a href="#about">About</a>
+        </nav>
+
+        <p class="copyright">© <span id="year"></span> E-Cell • Built by Bhavya | Ansh</p>
+      </div>
+
+      <div class="footer-right">
+        <div class="get-in-touch card">
+          <h3>Get in touch</h3>
+          <p class="muted">Collaborations, sponsorships, or joining the team—drop us a message.</p>
+
+          <form id="footerContact" class="form-footer" novalidate>
+            <label>
+              <span>Name</span>
+              <input name="name" type="text" required placeholder="Your name">
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" required placeholder="you@example.com">
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="4" required placeholder="Tell us about your idea"></textarea>
+            </label>
+
+            <div class="form-row">
+              <button type="submit" class="btn">Send</button>
+              <p id="footerStatus" class="muted" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+
+        <div class="footer-social-logos">
+          <a class="icon linkedin" href="https://www.linkedin.com/company/entrepreneurshipdevelopmentcell" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+          <a class="icon instagram" href="https://www.instagram.com/edcbvducoep" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a class="icon mail" href="mailto:bhavyachawda19@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
     </div>
+  </footer>
 
-</footer>
-
-
-<!-- JS for animations -->
-<script>
-document.querySelectorAll('.fade-up').forEach((el, i)=>{
-    setTimeout(()=>el.classList.add('show'), i*150)
-});
-</script>
-
+  <!-- small JS for nav + form + animations -->
+  <script src="animations.js"></script>
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
