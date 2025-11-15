@@ -173,6 +173,67 @@ p{ color:#94a3b8; margin:0 0 1em 0; }
   .num-card{ width:calc(50% - 10px); }
 }
 
+/* ===== QUICK PATCH TO FIX HEADER / HERO / CARDS / FOOTER ===== */
+
+/* 1) Remove any ghost underline / dash near brand/logo */
+.brand, .brand * { text-decoration: none !important; outline: none !important; border: none !important; box-shadow: none !important; }
+.brand img { display: block; } /* prevents inline-image baseline gaps */
+
+/* If some pseudo-element is causing the line, hide it */
+.brand-text::before, .brand-text::after, .brand::before, .brand::after { content: none !important; display: none !important; }
+
+/* 2) Ensure header has stable height and does NOT add gap lines */
+.site-header { border-bottom: none !important; box-shadow: none !important; background: rgba(2,6,23,0.95) !important; }
+.header-inner { height: 72px; align-items: center; }
+
+/* 3) NAV links — remove underline/underline-ghost and keep hover bg only */
+.nav a { text-decoration: none !important; border-bottom: none !important; outline: none !important; }
+.nav a:focus, .nav a:active { text-decoration: none !important; outline: none !important; }
+
+/* 4) Force card surfaces to navy (not page BG) */
+.card, .person, .member, .event-card, .testimonial, .form, .register-card, .login-card {
+  background: #1e293b !important; /* navy card surface */
+  color: #f1f5f9 !important;
+  border: 1px solid rgba(148,163,184,0.15) !important;
+}
+
+/* 5) Hero layout fixes — prevent overlap under header and keep left aligned text */
+.hero-section {
+  padding-top: 28px !important;        /* space below sticky header */
+  box-sizing: border-box;
+  min-height: 64vh !important;
+}
+.hero-inner { display:flex !important; gap: 28px !important; align-items:center !important; justify-content:space-between !important; }
+.hero-content { max-width: 56% !important; margin-left: 12px !important; }
+.hero-panel { width: 40% !important; height: 360px !important; }
+
+/* Make hero lines stack left and not overlap */
+.hero-line { display:block !important; margin: 0 !important; }
+
+/* 6) Footer smaller: reduce padding & compact the right column */
+.site-footer { padding: 12px 0 !important; font-size: 0.95rem; }
+.footer-inner { gap: 12px !important; align-items:flex-start; }
+
+/* Put get-in-touch card inside footer-right full width on small screens */
+.footer-right .get-in-touch.card { width: 100% !important; }
+
+/* 7) Make sure floating social doesn't cover hero on narrow screens */
+@media (max-width:900px) {
+  .social-sidebar { right: 8px !important; }
+  .hero-panel { height: 220px !important; width: 100% !important; }
+  .hero-content { max-width: 100% !important; }
+}
+
+/* 8) Ensure the nav opened state displays correctly on mobile */
+.nav.open { display: flex !important; }
+
+/* 9) Make buttons stay above hero panel (z-index) */
+.hero-content, .hero-buttons, .btn { position: relative; z-index: 5; }
+
+
+.card p, .person p, .member .role, .testimonial figcaption { color: #94a3b8 !important; }
+
+
 
 
 
