@@ -1,28 +1,22 @@
-/* ----------------------
-   Reset & base (no variables)
-   Colors are explicit per your original style
-   ---------------------- */
 
-/* RESET */
 html { box-sizing: border-box; font-size: 16px; scroll-behavior: smooth; }
 *,*::before,*::after{ box-sizing: inherit; }
 body{
   margin:0;
   font-family: "Inter", Arial, sans-serif;
-  background:#0f172a; /* page background (antiquewhite was an earlier mention — keeping original navy) */
+  background:#0f172a;
   color:#f1f5f9;
   min-height:100vh;
   line-height:1.6;
 }
 
-/* container */
+
 .container{ width:90%; max-width:1200px; margin:0 auto; }
 
-/* TYPOGRAPHY */
 h1,h2,h3,h4,h5,h6{ color:#f1f5f9; font-weight:700; margin:0 0 .5em 0; }
 p{ color:#94a3b8; margin:0 0 1em 0; }
 
-/* ================= HEADER ================= */
+
 .site-header{
   background: rgba(2,6,23,0.95); /* dark */
   position: sticky; top:0; z-index:200;
@@ -34,15 +28,14 @@ p{ color:#94a3b8; margin:0 0 1em 0; }
   padding:12px 0;
 }
 
-/* Brand */
+
 .brand{ display:flex; align-items:center; gap:10px; text-decoration:none; color:#f1f5f9; }
 .logo{ display:block; border-radius:50%; background:#fff; }
 .brand-text{ font-weight:800; font-size:1.1rem; line-height:1; }
 
-/* Remove dashed/underline artifacts on focus/active */
 .brand, .brand * { outline: none; text-decoration: none; border: none; }
 
-/* Nav */
+
 .nav{ display:flex; gap:24px; align-items:center; list-style:none; margin:0; padding:0; }
 .nav li{ position:relative; }
 .nav a{
@@ -52,22 +45,20 @@ p{ color:#94a3b8; margin:0 0 1em 0; }
 }
 .nav a:hover{ background:#2563eb; color:#fff; text-decoration:none; }
 
-/* contact btn style in header */
 .btn-primary{ background:#2563eb; color:#ffffff; padding:8px 14px; border-radius:6px; display:inline-block; }
 
-/* dropdown */
+
 .dropdown-content{
   display:none; position:absolute; top:110%; right:0; background:#0f172a; min-width:160px; box-shadow:0 8px 16px rgba(0,0,0,0.2);
 }
 .dropdown:hover .dropdown-content{ display:block; }
 .dropdown-content a{ display:block; padding:10px 14px; color:#fff; text-decoration:none; }
 
-/* NAV TOGGLE (mobile) */
+
 .nav-toggle{ display:none; background:none; border:none; gap:4px; flex-direction:column; cursor:pointer; padding:8px; }
 .nav-toggle span{ display:block; width:24px; height:3px; background:#f1f5f9; border-radius:3px; }
 
-/* ================= HERO ================= */
-/* Blue gradient: top dark → bottom light (Wix-style atmospheric) */
+
 .hero-section{
   background: linear-gradient(180deg, #0b2546 0%, #1e4aa6 45%, #2f6bd3 100%);
   color:#fff;
@@ -85,49 +76,49 @@ p{ color:#94a3b8; margin:0 0 1em 0; }
   transform: translateY(0);
 }
 
-/* Lines of hero */
+
 .hero-line{ font-size:48px; margin:0; line-height:1; letter-spacing:-1px; opacity:0; transform:translateY(12px); }
 .hero-sub{ font-size:18px; color:#e6eefc; margin-top:16px; opacity:0; transform:translateY(12px); }
 
-/* hero buttons */
+
 .hero-buttons{ margin-top:20px; display:flex; gap:16px; opacity:0; transform:translateY(12px); }
 .btn{ display:inline-block; padding:10px 22px; border-radius:8px; font-weight:700; background:#2563eb; color:#fff; text-decoration:none; transition:all .28s ease; }
 .btn:hover{ transform:translateY(-3px); background:#1e40af; }
 .btn-explore{ background:transparent; border:2px solid #2563eb; color:#fff; }
 .btn-explore:hover{ background:#2563eb; color:#fff; }
 
-/* ================= ABOUT (centered) ================= */
+
 .section{ padding:64px 0; }
 .about .about-inner{ max-width:900px; margin:0 auto; text-align:center; }
 .about-copy h2{ font-size:28px; margin-bottom:12px; }
 .checklist{ list-style:none; padding:0; margin-top:16px; display:inline-block; text-align:left; }
 .checklist li{ color:#f1f5f9; padding-left:24px; margin-bottom:8px; position:relative; }
-.checklist li::before{ content:"✔"; position:absolute; left:0; color:#2563eb; }
 
-/* ================= FLAGSHIP (full width card) ================= */
+/*.checklist li::before{ content:""; position:absolute; left:0; color:#2563eb; }*\
+
+
 .flagship .flagship-card{ background:#1e293b; color:#f1f5f9; border-radius:12px; padding:28px; box-shadow:0 8px 24px rgba(2,6,23,0.4); }
 .flagship-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; margin-top:12px; }
 .flagship-grid > div{ padding:12px; background:rgba(255,255,255,0.02); border-radius:8px; }
 
-/* ================= NUMBERS ================= */
 .numbers-grid{ display:flex; gap:20px; justify-content:center; align-items:stretch; flex-wrap:wrap; }
 .num-card{ background:#0f172a; border:1px solid rgba(255,255,255,0.04); padding:24px 28px; border-radius:12px; text-align:center; width:220px; box-shadow:0 6px 18px rgba(2,6,23,0.35); }
 .num-card strong{ display:block; font-size:32px; color:#fbbf24; margin-bottom:8px; }
 .num-card span{ color:#e6eefc; }
 
-/* ================= TESTIMONIALS (horizontal flush boxes) ================= */
+
 .testimonial-row{ display:flex; gap:12px; align-items:stretch; margin-top:20px; }
 .testimonial{ flex:1; background:#1e293b; border-radius:10px; padding:22px; box-shadow:0 8px 20px rgba(2,6,23,0.35); color:#f1f5f9; opacity:0; transform:translateY(10px); }
 .testimonial blockquote{ margin:0 0 12px 0; font-size:18px; color:#e6eefc; }
 .testimonial figcaption{ color:#94a3b8; font-size:14px; }
 
-/* ================= FOOTER ================= */
+
 .site-footer{ background: rgba(2,6,12,0.55); border-top:1px solid rgba(148,163,184,0.12); padding:18px 0; color:#f1f5f9; }
 .footer-inner{ display:flex; gap:24px; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; }
 .footer-left{ max-width:46%; min-width:240px; }
 .footer-right{ max-width:44%; min-width:280px; display:flex; flex-direction:column; gap:12px; align-items:flex-end; }
 
-/* footer contact block (right) */
+
 .get-in-touch.card{ width:100%; background:#1e293b; padding:16px; border-radius:12px; box-shadow:0 6px 18px rgba(2,6,23,0.35); }
 .get-in-touch h3{ margin:0 0 8px 0; }
 .muted{ color:#94a3b8; font-size:0.95rem; margin:0 0 10px 0; }
@@ -136,20 +127,18 @@ p{ color:#94a3b8; margin:0 0 1em 0; }
 .form-row{ display:flex; gap:12px; align-items:center; }
 #footerStatus{ font-size:0.92rem; color:#94a3b8; margin:0; }
 
-/* footer social icons */
+
 .footer-social-logos{ display:flex; gap:10px; margin-top:8px; }
 .footer-social-logos .icon{ width:40px; height:40px; display:inline-flex; align-items:center; justify-content:center; border-radius:8px; background:#111827; color:#fff; }
 
-/* small footer tweaks */
 .footer-nav{ margin-top:12px; display:flex; gap:12px; flex-wrap:wrap; }
 .footer-nav a{ color:#f1f5f9; text-decoration:none; font-size:0.95rem; }
 
-/* social sidebar (floating) */
-.social-sidebar{ position:fixed; top:50%; right:18px; transform:translateY(-50%); display:flex; flex-direction:column; gap:12px; padding:10px; border-radius:30px; background:rgba(17,24,39,0.8); z-index:999; }
+
+.social-sidebar{ position:fixed; top:50%; right:18px; transform:translateY(-50%); display:flex; flex-direction:column; gap:12px; text-decoration:none; padding:10px; border-radius:30px; background:rgba(17,24,39,0.8); z-index:999; }
 .social-sidebar .icon{ width:40px; height:40px; display:flex; align-items:center; justify-content:center; background:#111827; color:white; border-radius:50%; }
 
-/* ================= Accessibility & animations initial state ================= */
-/* elements that animate in start slightly offset/transparent (animations.js will toggle 'in') */
+
 .hero-line, .hero-sub, .hero-buttons, .testimonial, .num-card, .flagship-card { transition: all 700ms cubic-bezier(.2,.9,.3,1); }
 .hero-line.in, .hero-sub.in, .hero-buttons.in, .testimonial.in, .num-card.in, .flagship-card.in { opacity:1; transform:translateY(0); }
 
@@ -173,7 +162,7 @@ p{ color:#94a3b8; margin:0 0 1em 0; }
   .num-card{ width:calc(50% - 10px); }
 }
 
-/* ===== QUICK PATCH TO FIX HEADER / HERO / CARDS / FOOTER ===== */
+
 
 /* 1) Remove any ghost underline / dash near brand/logo */
 .brand, .brand * { text-decoration: none !important; outline: none !important; border: none !important; box-shadow: none !important; }
@@ -232,6 +221,7 @@ p{ color:#94a3b8; margin:0 0 1em 0; }
 
 
 .card p, .person p, .member .role, .testimonial figcaption { color: #94a3b8 !important; }
+
 
 
 
