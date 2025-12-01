@@ -91,16 +91,10 @@ a:hover {
 }
 
 .brand img {
-  display: block;        /* avoid inline-image baseline gap (no white dash) */
- 
-  background: #ffffff;
+  display: block;
+  margin-top: 10px;        /* avoid inline-image baseline gap (no white dash) */
 }
 
-.brand-text {
-  font-weight: 800;
-  font-size: 1.1rem;
-  line-height: 1;
-}
 
 /* Extra safety to avoid random line/underline near brand */
 
@@ -871,6 +865,7 @@ display: grid;
     width: calc(50% - 10px);
   }
 }
+
 
 
 
