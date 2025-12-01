@@ -92,7 +92,7 @@ a:hover {
 
 .brand img {
   display: block;        /* avoid inline-image baseline gap (no white dash) */
-  border-radius: 50%;
+ 
   background: #ffffff;
 }
 
@@ -871,5 +871,6 @@ display: grid;
     width: calc(50% - 10px);
   }
 }
+
 
 
