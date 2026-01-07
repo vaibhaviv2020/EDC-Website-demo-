@@ -1,20 +1,18 @@
-/* =======================
-   THEME VARIABLES (EDC)
-   ======================= */
-
-/* =======================
-   THEME VARIABLES (ORIGINAL COLORS)
-   ======================= */
-
 :root {
-  /* Backgrounds */
+  /* =======================
+     BACKGROUNDS
+     ======================= */
+
   --bg-main: #020617;                 /* page background */
   --bg-header: rgba(2, 6, 23, 0.95);  /* header */
   --bg-surface: #1e293b;             /* cards, panels */
   --bg-surface-dark: #0f172a;        /* dropdowns, inputs */
   --bg-footer: rgba(2, 6, 12, 0.55);  /* footer */
 
-  /* Hero / Section Gradient */
+  /* =======================
+     HERO / SECTION GRADIENT
+     ======================= */
+
   --grad-hero: linear-gradient(
     180deg,
     #0b2546 0%,
@@ -22,22 +20,35 @@
     #2f6bd3 100%
   );
 
-  /* Brand */
+  /* =======================
+     BRAND / ACCENT COLORS
+     ======================= */
+
   --primary: #2563eb;
   --primary-hover: #1e40af;
   --primary-light: #60a5fa;
+  --primary-soft: rgba(37, 99, 235, 0.15);
 
-  /* Text */
+  /* =======================
+     TEXT COLORS
+     ======================= */
+
   --text-main: #f1f5f9;
   --text-muted: #94a3b8;
   --text-soft: #e6eefc;
   --text-white: #ffffff;
 
-  /* Borders */
+  /* =======================
+     BORDERS
+     ======================= */
+
   --border-soft: rgba(148, 163, 184, 0.15);
   --border-light: rgba(255, 255, 255, 0.2);
 
-  /* Shadows */
+  /* =======================
+     SHADOWS
+     ======================= */
+
   --shadow-soft: 0 8px 20px rgba(2, 6, 23, 0.35);
   --shadow-inset: inset 0 0 60px rgba(0, 0, 0, 0.15);
 }
@@ -45,8 +56,7 @@
 /* =======================
    RESET & BASE
    ======================= */
-
-html {
+   html {
   box-sizing: border-box;
   font-size: 16px;
   scroll-behavior: smooth;
@@ -59,40 +69,32 @@ html {
 body {
   margin: 0;
   font-family: "Inter", Arial, sans-serif;
-  background: var(--bg-main);          /* soft off white */
-  color: var(--text-main);
+  background: var(--bg-main);
+  color: var(--text-body);   /* FIXED */
   min-height: 100vh;
   line-height: 1.6;
 }
-
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Typography */
-
 h1, h2, h3, h4, h5, h6 {
   color: var(--text-main);
-  font-weight: 700;
-  margin: 0 0 0.5em 0;
 }
 
 p {
-  color: var(--text-muted);
-  margin: 0 0 1em 0;
+  color: var(--text-body);
 }
 
 a {
   color: var(--primary);
-  text-decoration: none;
 }
 
 a:hover {
-  color: var(--primary-light);
+  color: var(--primary-hover); /* FIXED */
 }
-
 /* Utility */
 
 .section {
@@ -103,6 +105,7 @@ a:hover {
   text-align: center;
   color: var(--text-white);
 }
+
 
 /* =======================
    HEADER & NAV
@@ -131,7 +134,7 @@ a:hover {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--text-main);
+  color: var(--text-white);   /* FIXED: header sits on dark bg */
   text-decoration: none;
 }
 
@@ -166,7 +169,7 @@ a:hover {
 }
 
 .nav a {
-  color: var(--text-main);
+  color: var(--text-white);   /* FIXED */
   font-weight: 600;
   font-size: 18px;
   padding: 6px 10px;
@@ -187,6 +190,10 @@ a:hover {
   padding: 8px 14px;
   border-radius: 6px;
   display: inline-block;
+}
+
+.btn-primary:hover {
+  background: var(--primary-hover);
 }
 
 /* Dropdown */
@@ -240,9 +247,10 @@ a:hover {
   display: block;
   width: 24px;
   height: 3px;
-  background: var(--text-main);
+  background: var(--text-white); /* FIXED */
   border-radius: 3px;
 }
+
 
 /* =======================
    BUTTONS
@@ -278,17 +286,14 @@ a:hover {
 }
 
 .btn-explore:hover {
-  background: var(--primary);
+  background: var(--primary-hover);
   color: var(--text-white);
   transform: translateY(-3px);
 }
-
-
 /* =======================
    HERO
    ======================= */
 
-/* Blue gradient: top dark → bottom light */
 .hero-section {
   background: var(--grad-hero);
   color: var(--text-white);
@@ -312,7 +317,7 @@ a:hover {
   max-width: 55%;
   padding-left: 12px;
   position: relative;
-  z-index: 5;   /* ensures text & buttons above decorative panel */
+  z-index: 5;
 }
 
 .hero-panel {
@@ -355,7 +360,6 @@ a:hover {
   opacity: 0;
   transform: translateY(12px);
 }
-
 /* ===================== ABOUT SECTION ===================== */
 
 .about-section {
@@ -367,6 +371,7 @@ a:hover {
   font-size: 36px;
   margin-bottom: 12px;
   font-weight: 800;
+  color: var(--text-main);
 }
 
 .about-para {
@@ -374,7 +379,7 @@ a:hover {
   margin: 0 auto 35px;
   font-size: 17px;
   line-height: 1.7;
-  color: #cbd5e1; /* kept as-is (already matches design tone) */
+  color: var(--text-muted);   /* FIXED */
 }
 
 .about-points-grid {
@@ -408,7 +413,7 @@ a:hover {
   top: 8px;
   width: 8px;
   height: 8px;
-  background: var(--text-white);
+  background: var(--primary);
   border-radius: 50%;
 }
 
@@ -490,20 +495,17 @@ a:hover {
 .stack-middle {
   margin-top: 45px;
 }
-/* use testimonial card style */
+
+/* flagship card */
 .flag-card {
   background: var(--bg-surface);
-
   opacity: 0;
   transform: translateY(25px);
   transition: all 0.7s ease-out;
   min-width: 200px;
 
   border-radius: 12px;
-  padding-top: 20px ;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 25px;
+  padding: 20px 20px 25px;
   text-align: center;
   box-shadow: var(--shadow-soft);
 }
@@ -536,7 +538,7 @@ a:hover {
 .flag-card h4 {
   margin: 0 0 6px 0;
   font-size: 18px;
-  color: var(--text-white);
+  color: var(--text-main);
 }
 
 .flag-card p {
@@ -544,23 +546,22 @@ a:hover {
   margin: 0;
 }
 
-@media(max-width: 900px){
+@media (max-width: 900px) {
   .flagship-stacks {
     flex-direction: column;
     align-items: center;
   }
-  .stack-mid {
+  .stack-middle {
     margin-top: 0;
   }
 }
-
 /* ---------------------------
    OUR VISION SECTION
 ---------------------------- */
 
 .vision-sub {
   text-align: center;
-  color: #cbd5e1; /* keeping exact tone from mockup */
+  color: var(--text-muted);   /* FIXED */
   max-width: 780px;
   margin: 0 auto 10px;
   line-height: 1.6;
@@ -589,7 +590,7 @@ a:hover {
   content: "";
   width: 9px;
   height: 9px;
-  background: var(--text-white);
+  background: var(--primary);
   border-radius: 50%;
   position: absolute;
   left: 0;
@@ -602,7 +603,7 @@ a:hover {
 }
 
 .vision-point h4 {
-  color: var(--text-white);
+  color: var(--text-main);
   margin-bottom: 6px;
   font-size: 18px;
 }
@@ -614,13 +615,13 @@ a:hover {
 }
 
 /* responsive */
-@media(max-width: 900px){
+@media (max-width: 900px) {
   .vision-points {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media(max-width: 600px){
+@media (max-width: 600px) {
   .vision-points {
     grid-template-columns: 1fr;
   }
@@ -820,13 +821,13 @@ a:hover {
 
 /* =======================
    FOOTER
-   ======================= */
+======================= */
 
 .site-footer {
   background: var(--bg-footer);
   padding: 45px 0 25px;
-  border-top: 1px solid rgba(255,255,255,0.08);
-  color: var(--text-main);
+  border-top: 1px solid var(--border-light);
+  color: var(--text-soft);
   font-size: 0.95rem;
 }
 
@@ -840,7 +841,7 @@ a:hover {
 /* COLUMN 1 — CONTACT */
 .footer-contact p {
   margin: 6px 0;
-  color: #e2e8f0;
+  color: var(--text-soft);
 }
 
 /* COLUMN 2 — LINKS */
@@ -849,9 +850,11 @@ a:hover {
   flex-direction: column;
   gap: 8px;
 }
+
 .footer-links a {
-  color: #cbd5e1;
+  color: var(--text-muted);
 }
+
 .footer-links a:hover {
   color: var(--text-white);
 }
@@ -876,26 +879,26 @@ a:hover {
 
 .footer-form span {
   font-size: 14px;
-  color: var(--text-white);
+  color: var(--text-soft);
   margin-bottom: 4px;
   display: block;
 }
 
 .footer-form input,
 .footer-form textarea {
-  background: var(--bg-surface-dark);
-  border: 1px solid rgba(148,163,184,0.25);
+  background: var(--bg-surface-alt);
+  border: 1px solid var(--border-soft);
   border-radius: 8px;
   padding: 10px 12px;
   width: 100%;
-  color: var(--text-white);
+  color: var(--text-main);
   resize: none;
 }
 
 .footer-form input:focus,
 .footer-form textarea:focus {
   outline: none;
-  box-shadow: 0 0 0 2px #2563eb66;
+  box-shadow: 0 0 0 2px var(--primary-soft);
 }
 
 #footerStatus {
@@ -908,6 +911,7 @@ a:hover {
 .follow-title {
   font-weight: 600;
   margin-bottom: 8px;
+  color: var(--text-white);
 }
 
 .social-icons {
@@ -919,15 +923,19 @@ a:hover {
 .social-icons .icon {
   width: 36px;
   height: 36px;
-  background: #111827;
+  background: var(--bg-surface);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--text-white);
+  color: var(--text-main);
+  transition: background 0.25s ease, transform 0.25s ease;
 }
+
 .social-icons .icon:hover {
-  background: #6b7280;
+  background: var(--primary);
+  color: var(--text-white);
+  transform: translateY(-2px);
 }
 
 /* COPYRIGHT */
@@ -936,6 +944,7 @@ a:hover {
   color: var(--text-muted);
   line-height: 1.5;
 }
+
 .footer-btn {
   margin-top: 10px;
   width: auto;
@@ -951,7 +960,7 @@ a:hover {
 
 /* =======================
    FLOATING SOCIAL SIDEBAR
-   ======================= */
+======================= */
 
 .social-sidebar {
   position: fixed;
@@ -963,7 +972,8 @@ a:hover {
   gap: 12px;
   padding: 10px;
   border-radius: 30px;
-  background: rgba(17, 24, 39, 0.8);
+  background: var(--bg-footer);
+  box-shadow: var(--shadow-soft);
   z-index: 999;
 }
 
@@ -973,14 +983,15 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #111827;
-  color: var(--text-white);
+  background: var(--bg-surface);
+  color: var(--text-main);
   border-radius: 50%;
+  transition: all 0.25s ease;
 }
 
 .social-sidebar .icon:hover {
-  background: #6b7280 !important; /* grey on hover */
-  color: var(--text-white) !important;
+  background: var(--primary);
+  color: var(--text-white);
   transform: scale(1.1);
 }
 
@@ -1128,13 +1139,13 @@ a:hover {
 .event-scroll-link {
   font-size: 18px;
   font-weight: 600;
-  color: #e5e7eb;
+  color: var(--text-soft);
   text-decoration: none;
   transition: color 0.25s ease, transform 0.25s ease;
 }
 
 .event-scroll-link:hover {
-  color: #60a5fa;
+  color: var(--primary);
   transform: translateY(-1px);
 }
 
@@ -1227,7 +1238,7 @@ a:hover {
   padding: 8px 16px;
   border-radius: 20px;
   background: var(--bg-surface);
-  border: 1px solid rgba(148, 163, 184, 0.2);
+  border: 1px solid var(--border-soft);
   color: var(--text-main);
   cursor: pointer;
   font-size: 14px;
@@ -1244,14 +1255,10 @@ a:hover {
 /* ============================================================
    PAST EVENTS
 ============================================================ */
-/* =====================
-   PAST EVENTS SUBTEXT
-===================== */
 
 .events-subtext {
   text-align: center;
   margin: 8px auto 30px;
-
   font-size: 14px;
   color: var(--text-white);
   font-weight: 400;
@@ -1265,7 +1272,6 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 30px;
-
 }
 
 .past-event-card {
@@ -1301,6 +1307,7 @@ a:hover {
   color: var(--text-muted);
   line-height: 1.6;
 }
+
 /* =====================
    PAST EVENT READ MORE
 ===================== */
@@ -1311,11 +1318,11 @@ a:hover {
 
   font-size: 14px;
   font-weight: 600;
-  color: var(--primary-light);
+  color: var(--primary);
 
   text-decoration: none;
   background: transparent;
-  border: 1px solid rgba(148,163,184,0.35);
+  border: 1px solid var(--border-soft);
   border-radius: 20px;
 
   padding: 6px 14px;
@@ -1323,7 +1330,7 @@ a:hover {
 }
 
 .past-readmore:hover {
-  background: rgba(96,165,250,0.12);
+  background: var(--primary-soft);
   transform: translateY(-1px);
 }
 
@@ -1359,6 +1366,7 @@ a:hover {
     height: 200px;
   }
 }
+
 /* =====================
    PAST EVENT EXPAND
 ===================== */
@@ -1370,7 +1378,7 @@ a:hover {
 }
 
 .past-event-card.expanded .past-event-more {
-  max-height: 300px; /* enough for content */
+  max-height: 300px;
 }
 
 .past-readmore {
@@ -1381,7 +1389,7 @@ a:hover {
   color: var(--text-muted);
 
   background: transparent;
-  border: 1px solid rgba(148,163,184,0.35);
+  border: 1px solid var(--border-soft);
   border-radius: 20px;
   padding: 6px 14px;
 
@@ -1390,7 +1398,7 @@ a:hover {
 }
 
 .past-readmore:hover {
-  background: rgba(96,165,250,0.12);
+  background: var(--primary-soft);
   transform: translateY(-1px);
 }
 
