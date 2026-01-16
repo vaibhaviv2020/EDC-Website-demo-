@@ -289,6 +289,14 @@ pastReadMoreButtons.forEach((btn) => {
 ============================================================ */
 
 revealOnScroll(".rise-team", 150);
+
+document.querySelectorAll(".member").forEach(card => {
+  const img = card.querySelector("img");
+  if (img) {
+    card.style.setProperty("--bg-image", `url(${img.src})`);
+  }
+});
+
 /* ============================================================
    EVENT IMAGE SLIDER Gallery page
 ============================================================ */
