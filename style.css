@@ -1,3 +1,4 @@
+
 :root {
   /* =======================
      BACKGROUNDS
@@ -243,14 +244,41 @@ button:hover {
   flex-direction: column;
   cursor: pointer;
   padding: 8px;
+  z-index: 201;
+  position: relative;
+  margin: 0px 0px 0px 150px;
 }
 
 .nav-toggle span {
   display: block;
   width: 24px;
   height: 3px;
-  background: var(--text-white); /* FIXED */
+  background: var(--text-on-dark);
   border-radius: 3px;
+  transition: all 0.3s ease;
+  margin: 2px 0;
+}
+
+.nav-toggle:hover {
+  opacity: 0.8;
+}
+
+.nav-toggle:focus {
+  outline: 2px solid var(--text-on-dark);
+  outline-offset: 2px;
+}
+
+/* Hamburger animation when nav is open */
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 
@@ -717,9 +745,39 @@ button:hover {
 .speakers-track {
   display: flex;
   gap: 16px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
-   justify-content: flex-start;
+  justify-content: flex-start;
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: var(--accent) transparent; /* Firefox */
+  cursor: grab;
+}
+
+.speakers-track:active {
+  cursor: grabbing;
+}
+
+/* Hide scrollbar for Chrome, Safari, Edge */
+.speakers-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.speakers-track::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.speakers-track::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.speakers-track::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
 }
 
 .speaker-card {
@@ -730,6 +788,7 @@ button:hover {
   text-align: center;
   transition: 0.3s ease;
   flex: 0 0 198px;
+  scroll-snap-align: start;
 }
 
 .speaker-card img {
@@ -1075,25 +1134,113 @@ button:hover {
     right: 8px;
   }
 
+  /* Mobile speaker section improvements */
+  .speakers-wrapper {
+    gap: 8px;
+  }
+
+  .speaker-arrow {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+  }
+
+  .speakers-track {
+    gap: 12px;
+    padding-bottom: 8px; /* Space for scrollbar */
+  }
+
+  .speaker-card {
+    min-width: 180px;
+    flex: 0 0 180px;
+  }
+
   /* mobile nav behavior */
+  header nav {
+    position: relative;
+  }
+  
   .nav {
-    position: absolute;
+    position: fixed;
     top: 72px;
     right: 0;
     left: 0;
-    background: var(--bg-surface);
+    background: var(--bg-dark);
     display: none;
     flex-direction: column;
-    padding: 18px;
-    gap: 12px;
+    padding: 20px;
+    gap: 0;
+    z-index: 200;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
 
   .nav.open {
-    display: flex;
+    display: flex !important;
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideDown 0.3s ease-out;
+  }
+
+  .nav li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav li:last-child {
+    border-bottom: none;
+  }
+
+  .nav a {
+    display: block;
+    padding: 16px 20px;
+    font-size: 18px;
+    text-align: left;
+    color: var(--text-on-dark);
+    width: 100%;
+    border-radius: 8px;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .nav a:hover,
+  .nav a:active {
+    background: var(--accent);
+    color: var(--text-on-dark);
   }
 
   .nav-toggle {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 201;
+    background: transparent;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 4px;
+  }
+  
+  .nav-toggle:active {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Hide desktop nav on mobile */
+  header nav .nav:not(.open) {
+    display: none;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
@@ -1108,6 +1255,60 @@ button:hover {
 
   .num-card {
     width: calc(50% - 10px);
+  }
+
+  /* Enhanced mobile nav for small screens */
+  .nav-toggle {
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+  }
+
+  .nav-toggle span {
+    width: 22px;
+    height: 2.5px;
+  }
+
+  .nav {
+    padding: 16px;
+  }
+
+  .nav a {
+    padding: 14px 16px;
+    font-size: 16px;
+  }
+
+  .header-inner {
+    padding: 10px 16px;
+  }
+
+  /* Small screen speaker section */
+  .speakers-wrapper {
+    gap: 5px;
+  }
+
+  .speaker-arrow {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .speaker-card {
+    min-width: 160px;
+    flex: 0 0 160px;
+    padding: 12px;
+  }
+
+  .speaker-card img {
+    height: 140px;
+  }
+
+  .speaker-card h4 {
+    font-size: 14px;
+  }
+
+  .speaker-card p {
+    font-size: 12px;
   }
 }
 /* ============================================================
@@ -1730,9 +1931,37 @@ button:hover {
 .event-track {
   display: flex;
   gap: 10px;
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   scroll-behavior: smooth;
   width: 100%;
+  cursor: grab;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) transparent;
+}
+
+.event-track:active {
+  cursor: grabbing;
+}
+
+.event-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.event-track::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 4px;
+}
+
+.event-track::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+.event-track::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
 }
 
 /* 4 images visible */
@@ -1743,6 +1972,14 @@ button:hover {
   object-fit: cover;
   border: none;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.35);
+  scroll-snap-align: start;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  pointer-events: auto;
 }
 
 /* arrows */
@@ -1787,4 +2024,3 @@ button:hover {
     flex: 0 0 100%;
   }
 }
-
